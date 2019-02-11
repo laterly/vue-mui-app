@@ -1,4 +1,4 @@
-## mui-vue
+## mui-vue-app
 基于mui+vue的H5 APP项目,用webpack打包成多页面，多页面便于mui的解决思路是：将需要滚动的区域通过单独的webview实现，完全使用原生滚动。也就是说，将页面分为主页面和子页面两部分，主页面只有头部和尾部，而需要滚动的区域放置到子页面中，并在mui.init()方法中加载
 
 app打包技术是用[HBuilder IDE](http://www.dcloud.io/index.html)工具一键打包成APP，也可以借助eclipse本地打包（本地打包是有添加Android sdk包的需求，这里没有介绍，只是简单构建使用，本地打包工程文件如需可以索取）。这些都是[dcloud](http://www.dcloud.io/index.html)提供一整套技术解决方案。
