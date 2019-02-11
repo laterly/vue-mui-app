@@ -1,26 +1,6 @@
 <template>
   <div class="main">
-    <div class='mui-scroll-wrapper'>
-      <div class='mui-scroll'>
-        <form class="mui-input-group">
-          <div class="mui-input-row">
-            <label>用户名</label>
-            <input type="text" class="mui-input-clear" placeholder="请输入用户名">
-          </div>
-          <div class="mui-input-row">
-            <label>密码</label>
-            <input type="password" class="mui-input-password" placeholder="请输入密码">
-          </div>
-          <div class="mui-button-row">
-            <button type="button" class="mui-btn mui-btn-primary">确认</button>
-            <button type="button" class="mui-btn mui-btn-danger" id="submit">取消</button>
-          </div>
-          <mt-button size="small">small</mt-button>
-          <mt-button size="large">large</mt-button>
-          <mt-button size="normal">normal</mt-button>
-        </form>
-      </div>
-    </div>
+  
   </div>
 </template>
 
@@ -29,35 +9,44 @@
   export default {
     data() {
       return {
-        msg: "zzz"
+        vPlus: null,
+        vWs: null,
       }
     },
     created() {
-      console.log('vue', mui);
+      window.clickButton = this.clickButton;
+      mui.init({
+        subpages: [{
+          url: 'list.html',
+          id: 'list.html',
+          styles: {
+            top: '45px', //mui标题栏默认高度为45px；
+            bottom: '0px' //默认为0px，可不定义；
+          }
+        }]
+      })
+      mui.plusReady(() => {
+        this.vPlus = plus;
+        this.vWs = plus.webview.currentWebview();
+        let _self = this.vWs;
+        let nav = _self.getNavigationbar();
+        nav.interceptTouchEvent(true);
+        nav.addEventListener("click", function(e) {
+          console.log(e.clientX);
+          alert(JSON.stringify(e));
+        });
+        this.vWs.addEventListener('titleNViewSearchInputConfirmed', function(e) {
+          alert(JSON.stringify(e));
+        }, false);
+      });
     },
     mounted() {
-      mui('.mui-scroll-wrapper').scroll({
-        deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
-        indicators: false //是否显示滚动条
-      });
-      mui.plusReady(function() {
-        console.log("当前页面URL：" + plus.webview.currentWebview().getURL());
-      });
-      var btn = document.getElementById("submit");
-      //监听点击事件
-      btn.addEventListener("tap", function() {
-        // mui.openWindow({
-        //   url: './index.html',
-        //   extras: {
-        //     name: 'mui' //扩展参数
-        //   }
-        // });
-      });
-      //触发submit按钮的点击事件
-      mui.trigger(btn, 'tap');
+  
     },
     methods: {
-  
+      clickButton() {
+        alert('111');
+      },
     },
   }
 </script>

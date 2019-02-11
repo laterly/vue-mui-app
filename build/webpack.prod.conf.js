@@ -47,10 +47,10 @@ const webpackConfig = merge(baseWebpackConfig, {
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
-    new CleanWebpackPlugin(["dist"], {
-      root: path.resolve(__dirname, "../") //根目录
-      //其他配置按需求添加
-    }),
+    // new CleanWebpackPlugin(["dist"], {
+    //   root: path.resolve(__dirname, "../") //根目录
+    //   //其他配置按需求添加
+    // }),
     new webpack.DefinePlugin({
       "process.env": env
     }),

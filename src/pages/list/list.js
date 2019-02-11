@@ -1,9 +1,9 @@
 
 import Vue from 'vue'
 import App from './App.vue'
-import { Header, Button } from "mint-ui";
+import { Button, Cell } from "mint-ui";
 Vue.component(Button.name, Button);
-Vue.component(Header.name, Header);
+Vue.component(Cell.name, Cell);
 Vue.config.productionTip = false;
 new Vue({
   el: "#app",
