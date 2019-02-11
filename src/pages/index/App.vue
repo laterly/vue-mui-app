@@ -16,8 +16,8 @@
             <button type="button" class="mui-btn mui-btn-danger" id="submit">取消</button>
           </div>
           <mt-button size="small">small</mt-button>
-<mt-button size="large">large</mt-button>
-<mt-button size="normal">normal</mt-button>
+          <mt-button size="large">large</mt-button>
+          <mt-button size="normal">normal</mt-button>
         </form>
       </div>
     </div>
@@ -46,7 +46,12 @@
       var btn = document.getElementById("submit");
       //监听点击事件
       btn.addEventListener("tap", function() {
-        console.log("tap event trigger211");
+        // mui.openWindow({
+        //   url: './index.html',
+        //   extras: {
+        //     name: 'mui' //扩展参数
+        //   }
+        // });
       });
       //触发submit按钮的点击事件
       mui.trigger(btn, 'tap');
@@ -57,12 +62,13 @@
   }
 </script>
 
-<style coped>
+<style lang="stylus" coped>
   html,
   body {
     margin: 0;
     width: 100%;
     height: 100%;
+    backgroud:red!important;
   }
   
   #div-iframe {

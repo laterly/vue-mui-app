@@ -42,8 +42,8 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? "#source-map" : false,
   output: {
     path: config.build.assetsRoot,
-    filename:  utils.assetsPath("js/[name].[chunkhash].js"),
-    chunkFilename:  utils.assetsPath("js/[id].[chunkhash].js")
+    filename: utils.assetsPath("js/[name].[chunkhash].js"),
+    chunkFilename: utils.assetsPath("js/[id].[chunkhash].js")
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
@@ -109,6 +109,13 @@ const webpackConfig = merge(baseWebpackConfig, {
       name: "manifest",
       chunks: ["vendor"]
     }),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, "../manifest.json"),
+        to: config.build.assetsRoot,
+        ignore: [".*"]
+      }
+    ]),
     // copy custom static assets
     new CopyWebpackPlugin([
       {
