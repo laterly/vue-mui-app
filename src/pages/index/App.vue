@@ -15,6 +15,9 @@
             <button type="button" class="mui-btn mui-btn-primary">确认</button>
             <button type="button" class="mui-btn mui-btn-danger" id="submit">取消</button>
           </div>
+          <mt-button size="small">small</mt-button>
+<mt-button size="large">large</mt-button>
+<mt-button size="normal">normal</mt-button>
         </form>
       </div>
     </div>

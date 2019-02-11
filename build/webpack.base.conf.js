@@ -15,8 +15,6 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 entries.app = './src/libs/base.js';
-// console.log(entries)
-console.log(config.build.assetsPublicPath);
 module.exports = {
   // entry: {
   //   'pages/boys/index': './src/pages/boys/boys.js', //配置boys页面入口
@@ -83,7 +81,8 @@ module.exports = {
         loader: "url-loader",
         options: {
           limit: 10000,
-          name: utils.assetsPath("fonts/[name].[hash:7].[ext]")
+          // name: utils.assetsPath("fonts/[name].[hash:7].[ext]")
+          name: utils.assetsPath("fonts/[name].[ext]")
         }
       }
     ]
