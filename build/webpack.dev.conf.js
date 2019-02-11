@@ -13,10 +13,10 @@ var htmls = glob.sync('./src/pages/**/*.html').map(function (item) {
 
   return new HtmlWebpackPlugin({
     // filename: './' + item.slice(6),
-    filename: './'+ names[2]+'/'+names[4],    //相当于url
-    template: item,                           //文件路径
+    filename: "./" + names[2] + "/" + names[4], //相当于url
+    template: item, //文件路径
     inject: true,
-    chunks:[item.slice(6, -5)]
+    chunks: ["manifest", "vendor", "common", "libs", item.slice(6, -5)]
   });
 });
 
