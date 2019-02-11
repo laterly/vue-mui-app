@@ -1,2 +1,2 @@
 import "./base.css";//引入全局css
-alert('1111');
+// alert('1111');
