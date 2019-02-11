@@ -87,7 +87,7 @@ devMiddleware.waitUntilValid(() => {
     }
     process.env.PORT = port
     // var uri = 'http://localhost:' + port
-    var uri = 'http://localhost:' + port +'/pages/main.html';   //设置npm run dev 项目启动后默认打开的页面
+    var uri = 'http://localhost:' + port +'/pages/index.html';   //设置npm run dev 项目启动后默认打开的页面
     console.log('> Listening at ' + uri + '\n')
     // when env is testing, don't need open it
     if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {

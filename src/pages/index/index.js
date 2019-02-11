@@ -1,13 +1,15 @@
+
 import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-import Index from './index.vue'
-
-Vue.use(ElementUI)
-Vue.config.productionTip = false
-
+import App from './App.vue'
+/*全局muicss*/
+import "../../../static/css/mui.css";
+Vue.use(ElementUI);
+Vue.config.productionTip = false;
+// console.log(mui);
 new Vue({
-  el: '#app',
-  template: '<Index/>',
-  components: { Index }
-})
+  el: "#app",
+  template: "<App/>",
+  components: { App }
+});

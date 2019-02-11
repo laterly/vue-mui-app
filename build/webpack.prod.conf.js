@@ -22,9 +22,7 @@ var htmls = glob.sync('./src/pages/**/*.html').map(function (item) {
   return new HtmlWebpackPlugin({
     filename: "." + genName,
     template: item,
-    // inject: true,
-    inject: 'head',
-    inlineSource: '.(js|css)',
+    inject: true,
     minify: {
       removeComments: true,
       collapseWhitespace: true,
@@ -34,7 +32,6 @@ var htmls = glob.sync('./src/pages/**/*.html').map(function (item) {
     chunksSortMode: "manual"
   });
 });
-
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -45,14 +42,14 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? "#source-map" : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath("js/[name].[chunkhash].js"),
-    chunkFilename: utils.assetsPath("js/[id].[chunkhash].js")
+    filename:  utils.assetsPath("js/[name].[chunkhash].js"),
+    chunkFilename:  utils.assetsPath("js/[id].[chunkhash].js")
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
-    new CleanWebpackPlugin(['dist'], {
-       root: path.resolve(__dirname, '../'),   //根目录
-       //其他配置按需求添加
+    new CleanWebpackPlugin(["dist"], {
+      root: path.resolve(__dirname, "../") //根目录
+      //其他配置按需求添加
     }),
     new webpack.DefinePlugin({
       "process.env": env
