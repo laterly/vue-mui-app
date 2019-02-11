@@ -1,1 +1,1 @@
-console.log('main');
+alert('全局js');

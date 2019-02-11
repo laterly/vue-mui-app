@@ -14,7 +14,8 @@ var entries = glob.sync('./src/pages/**/*.js').reduce(function (prev, curr) {
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-entries.app = './src/libs/base.js';
+entries.common = ['./src/libs/base.js'];//引入全局js
+
 module.exports = {
   // entry: {
   //   'pages/boys/index': './src/pages/boys/boys.js', //配置boys页面入口
