@@ -55,6 +55,7 @@
     methods: {
       getList(){
          http.getJson('/api/topics/hot.json').then((res) => {
+           console.log('res',res);
            for(let item of res){
               this.list.push({
               avatarNormal:item.member.avatar_normal,
