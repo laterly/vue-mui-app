@@ -5,7 +5,7 @@ app打包技术是用[HBuilder IDE](http://www.dcloud.io/index.html)工具一键
 
 **说明:** 
 
-> 1. 前端UI的主要用mint-ui，部分使用mui框架
+> 1. 前端UI的主要用vue-material，部分使用mui框架
 > 
 > 2. app打包技术使用HBuilder IDE工具
 > 

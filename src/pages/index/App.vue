@@ -10,11 +10,13 @@
       </h1>
       <a class="mui-icon mui-action-menu mui-icon-more mui-pull-right"></a>
     </header>
-    <mt-navbar v-model="selected" ref='tabNav' id="tabNav">
-      <mt-tab-item id="1" html="all">全部</mt-tab-item>
-      <mt-tab-item id="2" html="hot">最热</mt-tab-item>
-      <mt-tab-item id="4" html="latest">最新</mt-tab-item>
-    </mt-navbar>
+    
+    <md-tabs class="md-transparent" md-alignment="fixed">
+      <md-tab id="tab-home" md-label="全部"></md-tab>
+      <md-tab id="tab-pages" md-label="最热"></md-tab>
+      <md-tab id="tab-posts" md-label="最新"></md-tab>
+      <md-tab id="tab-favorites" md-label="收藏"></md-tab>
+    </md-tabs>
     </div>
     <div class="footerBox">
       <nav class="mui-bar mui-bar-tab" id="nav">
@@ -159,6 +161,9 @@ export default {
     top: 8px !important;
     color: #fff !important;
     font-size: 14px !important;
+  }
+  .md-tabs{
+    background #fff;
   }
 }
 </style>
