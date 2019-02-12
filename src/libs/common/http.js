@@ -40,7 +40,7 @@ function getJson(url) {
     let func = () => {
        mui.ajax({
          url: baseUrl + url,
-           type: "GET",
+         type: "GET",
          processData:false,
          dataType: "json",
          crossDomain: true,
