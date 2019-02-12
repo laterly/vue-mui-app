@@ -1,13 +1,9 @@
 
 import Vue from 'vue'
 import App from './App.vue'
-import {
-  Navbar,
-  TabItem,
-} from 'mint-ui';
-
-Vue.component(Navbar.name, Navbar);
-Vue.component(TabItem.name, TabItem);
+import { Button, Cell } from "mint-ui";
+Vue.component(Button.name, Button);
+Vue.component(Cell.name, Cell);
 Vue.config.productionTip = false;
 new Vue({
   el: "#app",

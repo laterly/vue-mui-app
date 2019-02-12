@@ -40,29 +40,29 @@
     }
   },
   "plus": {
-    "launchwebview": {
-      "navigationbar": {
-        "titleText": "标题栏", // 标题栏文字,当不设置此属性时，
-        "titleColor": "#fff", // 字体颜色,
-        "titleSize": "17px", // 字体大小,默认17px
-        "backgroundColor": "#26a2ff", // 控件背景颜色,
-        "searchInput": {
-          "align": "left",
-          "backgroundColor": "backgroundColor: rgba(#26a2ff, 0.5)",
-          "borderRadius":"40px",
-          "placeholder":"搜索",
-          "disabled":true
-        },
-        "homeButton":true,
-        "buttons": [
-          {
-            "type": "menu",
-            "float": "right",
-            "onclick": "clickButton"
-          }
-        ]
-      }
-    },
+    // "launchwebview": {
+    //   "navigationbar": {
+    //     "titleText": "标题栏", // 标题栏文字,当不设置此属性时，
+    //     "titleColor": "#fff", // 字体颜色,
+    //     "titleSize": "17px", // 字体大小,默认17px
+    //     "backgroundColor": "#26a2ff", // 控件背景颜色,
+    //     "searchInput": {
+    //       "align": "left",
+    //       "backgroundColor": "backgroundColor: rgba(#26a2ff, 0.5)",
+    //       "borderRadius":"40px",
+    //       "placeholder":"搜索",
+    //       "disabled":true
+    //     },
+    //     "homeButton":true,
+    //     "buttons": [
+    //       {
+    //         "type": "menu",
+    //         "float": "right",
+    //         "onclick": "clickButton"
+    //       }
+    //     ]
+    //   }
+    // },
     "splashscreen": {
       "autoclose": true /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/,
       "waiting": true
