@@ -1,5 +1,5 @@
 import mui from "../../../static/js/mui";
-var baseUrl = "https://www.v2ex.com";
+var baseUrl = "http://localhost:8080";
 var timeout = 5;
 function get(url, data, opts) {
   opts = opts || {};
