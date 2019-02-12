@@ -3,7 +3,7 @@
     <ul class="mui-table-view mui-table-view-chevron">
 				<li class="mui-table-view-cell mui-media" v-for="(item,index) in list" :key="index">
 					<a class="mui-navigate-right">
-						<img class="mui-media-object mui-pull-left" :src="item.avatarNormal">
+						<img class="mui-media-object mui-pull-left" :src="'https:'+item.avatarNormal">
 						<div class="mui-media-body mui-ellipsis">
 							<span class="title-des">{{item.nodeTitle}}</span>{{item.title}}
 							<p class="mui-ellipsis">{{item.member}}•{{item.lastTouched}}•最后回复来自{{item.lastReplyBy}}</p>

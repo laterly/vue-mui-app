@@ -11,10 +11,10 @@ var entries = glob.sync('./src/pages/**/*.js').reduce(function (prev, curr) {
 }, {});
 
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
-entries.common = './src/libs/base.js';//引入全局js
+entries.common = './src/libs/base.js'; //引入全局js
 
 module.exports = {
   // entry: {
@@ -27,10 +27,9 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: "[name].js",
-    publicPath:
-      process.env.NODE_ENV === "production"
-        ? config.build.assetsPublicPath
-        : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === "production" ?
+      config.build.assetsPublicPath :
+      config.dev.assetsPublicPath
   },
   // resolve: {
   //   extensions: ['.js', '.vue', '.json'],
@@ -50,8 +49,7 @@ module.exports = {
     }
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.vue$/,
         loader: "vue-loader",
         options: vueLoaderConfig
@@ -83,7 +81,8 @@ module.exports = {
         options: {
           limit: 10000,
           // name: utils.assetsPath("fonts/[name].[hash:7].[ext]")
-          name: utils.assetsPath("fonts/[name].[ext]")
+          name: process.env.NODE_ENV === "production" ?
+          '/[name].[ext]':utils.assetsPath("fonts/[name].[hash:7].[ext]") 
         }
       }
     ]

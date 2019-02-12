@@ -1,9 +1,7 @@
 import mui from "../../../static/js/mui";
 var baseUrl = "http://localhost:8080";
+// var baseUrl = 'https://www.v2ex.com';
 var mask = mui.createMask(); //遮罩层
-mui.plusReady(() => {
-  baseUrl = 'https://www.v2ex.com';
-});
 var timeout = 5;
 
 function get(url, data, opts) {

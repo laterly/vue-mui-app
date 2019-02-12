@@ -75,8 +75,8 @@ export default {
           url: "./latest.html",
           id: "tab_latest",
           styles: {
-            top: 95 + "px", //mui标题栏默认高度为45px；
-            bottom: 50 + "px" //默认为0px，可不定义；
+            top: "95px", //mui标题栏默认高度为45px；
+            bottom: "50px" //默认为0px，可不定义；
           },
           createNew: false,
           show: {
